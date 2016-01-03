@@ -1,0 +1,46 @@
+@-webkit-keyframes spin-top {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes spin-bottom {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+atom-text-editor::shadow .pacmanfy {
+  width: 0px !important;
+  height: 0px !important;
+}
+
+atom-text-editor::shadow .pac-top {
+  height:12px;
+  width:24px;
+  border-radius:12px 12px 0 0!important;
+  background:yellow;
+  position: relative;
+  -webkit-animation: spin-top 500ms ease infinite alternate;
+}
+
+atom-text-editor::shadow .pac-bottom {
+  height:12px;
+  width:24px;
+  border-radius: 0 0 12px 12px !important;
+  background:yellow;
+  position: relative;
+  -webkit-animation: spin-bottom 500ms ease infinite alternate;
+}

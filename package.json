@@ -1,0 +1,18 @@
+{
+  "name": "pacmanfy",
+  "main": "./lib/pacmanfy",
+  "version": "0.0.0",
+  "description": "Change Cursor to a Pacman",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "pacmanfy:toggle"
+  },
+  "repository": "https://github.com/toxu/pacmanfy.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

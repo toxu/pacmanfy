@@ -1,0 +1,5 @@
+PacmanfyView	/Users/xuheng/github/pacmanfy/lib/pacmanfy-view.coffee	/^class PacmanfyView$/;"	function	line:2
+constructor	/Users/xuheng/github/pacmanfy/lib/pacmanfy-view.coffee	/^  constructor: (serializedState) ->$/;"	function	line:3
+serialize	/Users/xuheng/github/pacmanfy/lib/pacmanfy-view.coffee	/^  serialize: ->$/;"	function	line:23
+destroy	/Users/xuheng/github/pacmanfy/lib/pacmanfy-view.coffee	/^  destroy: ->$/;"	function	line:26
+getElement	/Users/xuheng/github/pacmanfy/lib/pacmanfy-view.coffee	/^  getElement: ->$/;"	function	line:29
