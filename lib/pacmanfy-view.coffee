@@ -5,7 +5,7 @@ class PacmanfyView
 
   constructor: ->
     @init()
-    @enable()
+    @disable()
     @activeItemSubscription = atom.workspace.onDidChangeActivePaneItem =>
       @init()
       if @disabled
