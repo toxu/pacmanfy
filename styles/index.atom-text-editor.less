@@ -1,24 +1,81 @@
-@-webkit-keyframes spin-top {
+@-webkit-keyframes spin-top-left {
   0% {
     transform: rotate(45deg);
   }
-  50% {
-    transform: rotate(0deg);
-  }
   100% {
-    transform: rotate(45deg);
+    transform: rotate(0deg);
   }
 }
 
-@-webkit-keyframes spin-bottom {
+@-webkit-keyframes spin-bottom-left {
   0% {
     transform: rotate(-45deg);
   }
-  50% {
+  100% {
     transform: rotate(0deg);
   }
-  100% {
+}
+
+@-webkit-keyframes spin-top-right {
+  0% {
     transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes spin-bottom-right {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes spin-top-right {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes spin-bottom-up {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes spin-top-up {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes spin-bottom-down {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes spin-top-down {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(90deg);
   }
 }
 
@@ -34,7 +91,8 @@ atom-text-editor::shadow .pac-top {
   border-radius:12px 12px 0 0!important;
   background:yellow;
   position: relative;
-  -webkit-animation: spin-top 500ms ease infinite alternate;
+  transform-origin: bottom center;
+  -webkit-animation: spin-top-left 250ms ease infinite alternate;
 }
 
 atom-text-editor::shadow .pac-bottom {
@@ -43,5 +101,6 @@ atom-text-editor::shadow .pac-bottom {
   border-radius: 0 0 12px 12px !important;
   background:yellow;
   position: relative;
-  -webkit-animation: spin-bottom 500ms ease infinite alternate;
+  transform-origin: top center;
+  -webkit-animation: spin-bottom-left 250ms ease infinite alternate;
 }
