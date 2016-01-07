@@ -6,6 +6,7 @@ class PacmanfyView
   constructor: ->
     @init()
     @disable()
+    @listenConfigChange()
     @activeItemSubscription = atom.workspace.onDidChangeActivePaneItem =>
       @init()
       if @disabled
@@ -31,6 +32,7 @@ class PacmanfyView
 
   createPacman: =>
     @cursorElement = @editorElement?.shadowRoot.querySelector(".cursor")
+    @cursorElement?.style.opacity = atom.config.get('pacmanfy.opacity')
     top = document.createElement "div"
     bottom = document.createElement "div"
     if not @cursorElement?.hasChildNodes()
@@ -105,3 +107,8 @@ class PacmanfyView
   turndown: (top, bottom) =>
       top.style.webkitAnimationName = 'spin-top-down'
       bottom.style.webkitAnimationName = 'spin-bottom-down'
+
+  listenConfigChange: ->
+    atom.config.onDidChange 'pacmanfy.opacity', =>
+      if not @disabled
+        @debounceCreatePacmanfy()

@@ -2,7 +2,10 @@
 PacmanfyView = require './pacmanfy-view'
 
 module.exports = Pacmanfy =
-  subscriptions: null
+  config:
+    opacity:
+      type: 'number'
+      default: 1.0
 
   activate: (state) ->
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
