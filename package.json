@@ -1,7 +1,7 @@
 {
   "name": "pacmanfy",
   "main": "./lib/pacmanfy",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Change Cursor to a Pacman",
   "keywords": [],
   "activationCommands": {
